@@ -494,14 +494,14 @@ return obj;
 
 
 if (typeof define == 'function' && typeof define.amd == 'object') {
-    console.log("RequireJS ... cfi_generator");
+    //console.log("RequireJS ... cfi_generator");
     
     define(['jquery', './cfi_instructions', './cfi_runtime_errors'],
     function ($, cfiInstructions, cfiRuntimeErrors) {
         return init($, cfiInstructions, cfiRuntimeErrors);
     });
 } else {
-    console.log("!RequireJS ... cfi_generator");
+    //console.log("!RequireJS ... cfi_generator");
     
     if (!global["EPUBcfi"]) {
         throw new Error("EPUBcfi not initialised on global object?! (window or this context)");

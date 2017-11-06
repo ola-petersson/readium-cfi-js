@@ -570,14 +570,14 @@ return obj;
 
 
 if (typeof define == 'function' && typeof define.amd == 'object') {
-    console.log("RequireJS ... cfi_interpreter");
+    //console.log("RequireJS ... cfi_interpreter");
 
     define(['jquery', 'readium_cfi_js/cfi_parser', './cfi_instructions', './cfi_runtime_errors'],
     function ($, cfiParser, cfiInstructions, cfiRuntimeErrors) {
         return init($, cfiParser, cfiInstructions, cfiRuntimeErrors);
     });
 } else {
-    console.log("!RequireJS ... cfi_interpreter");
+    //console.log("!RequireJS ... cfi_interpreter");
 
     if (!global["EPUBcfi"]) {
         throw new Error("EPUBcfi not initialised on global object?! (window or this context)");
